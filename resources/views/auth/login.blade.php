@@ -10,16 +10,17 @@
 </head>
 
 <body>
-    <section class="h-screen flex content">
+    <section class="h-screen flex content 2xl:w-full">
         <div class="w-2/4 h-full bg-greenTemlate">
-            
+            {{-- TODO: uygun reism bulunacak --}}
         </div>
         <div class="w-2/4 h-full p-content">
-            <div class="w-[500px] h-[550px] translate-mx bg-red-900">
+            <div class="w-[500px] h-auto translate-mx">
                 <form action="" method="post">
-                    <div class="w-20 h-20 bg-purple-500 mx-auto rounded-full"></div>
-                    <h1 class="text-center text-2xl font-bold mt-2 text-[#373737]">Hoşgeldin</h1>
-                    <h3 class="text-center text-sm mt-2 text-gray-500">Sistemimiz deneme amaçlı yapılmıştır hiçbir bilginiz gerçek veri olarak tutulmamaktadır</h3>
+                    <div class="w-32 h-32 mx-auto rounded-full ring-2 ring-greenTheme ring-offset-4">
+                        <img src="{{asset('assets/image/profile-photo.jpg')}}" class="rounded-full" alt="">
+                    </div>
+                    <h1 class="text-center text-2xl font-bold mt-5 text-[#373737]">Hoşgeldin</h1>
                     <div class="w-80 mt-7 mx-auto">
                         <div class="flex flex-col space-y-2">
                             <label class="text-lg text-[#373737]">E-Posta</label>
@@ -30,6 +31,9 @@
                             <input type="password" name="pass" class="placeholder:text-sm py-2 px-3 border-b bg-inherit outline-none" placeholder="Şifrenizi giriniz...">
                         </div>
                         <button class="w-full text-white font-semibold  mt-5 rounded-full py-2 bg-greenTemlate ">Giriş Yap</button>
+                        <div class="w-full flex justify-center pt-3">
+                            <a href="{{route('register')}}" class="text-sm font-semibold mx-auto text-greenTemlate">Kayıt Ol</a>
+                        </div>
                         <div class="w-full justify-center gap-7 items-center h-12 mt-7 flex">
                             <div class="w-12 h-12 p-1 rounded-full bg-white cursor-pointer">
                                 <img src="{{asset('assets/image/google.png')}}" alt="">
